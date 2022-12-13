@@ -1,0 +1,97 @@
+[
+    {
+        "keystrokes": [
+            {
+                "key": "Meta",
+                "time": 1670929054708,
+                "status": "none"
+            },
+            {
+                "key": "Shift",
+                "time": 1670929054709,
+                "status": "none"
+            },
+            {
+                "key": "Alt",
+                "time": 1670929054710,
+                "status": "none"
+            },
+            {
+                "key": " ",
+                "time": 1670929055032,
+                "status": "none"
+            },
+            {
+                "key": "presented-suggestion",
+                "time": 1670929057987,
+                "status": "loading"
+            },
+            {
+                "key": "Tab",
+                "time": 1670929060450,
+                "status": "presented"
+            }
+        ],
+        "username": "0"
+    },
+    {
+        "keystrokes": [
+            {
+                "key": "Meta",
+                "time": 1670929101052,
+                "status": "none"
+            },
+            {
+                "key": "a",
+                "time": 1670929101089,
+                "status": "none"
+            },
+            {
+                "key": "Backspace",
+                "time": 1670929101229,
+                "status": "none"
+            },
+            {
+                "key": "Meta",
+                "time": 1670929102285,
+                "status": "none"
+            },
+            {
+                "key": "Backspace",
+                "time": 1670929102496,
+                "status": "none"
+            },
+            {
+                "key": "Meta",
+                "time": 1670929120177,
+                "status": "none"
+            },
+            {
+                "key": "Shift",
+                "time": 1670929120192,
+                "status": "none"
+            },
+            {
+                "key": "Alt",
+                "time": 1670929120201,
+                "status": "none"
+            },
+            {
+                "key": " ",
+                "time": 1670929120529,
+                "status": "none"
+            },
+            {
+                "key": "presented-suggestion",
+                "time": 1670929134925,
+                "status": "loading"
+            },
+            {
+                "key": "Tab",
+                "time": 1670929137124,
+                "status": "presented"
+            }
+        ],
+        "username": "-1"
+    }
+]
