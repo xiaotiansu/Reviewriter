@@ -69,7 +69,7 @@ const getLast20WordsInStringBeforeIndex = (string, index) => {
 }
 
 const predictNextWord = (text, coordinates, setCoordinates) => {
-  fetch('http://localhost:5003/predictNextWord?' + new URLSearchParams({
+  fetch('http://localhost:5004/predictNextWord?' + new URLSearchParams({
     text: text,
 }), {
     method: 'GET',
@@ -89,7 +89,7 @@ const predictNextWord = (text, coordinates, setCoordinates) => {
 }
 
 const predictNextSentence = (text, coordinates, setCoordinates) => {
-  fetch('http://localhost:5003/predictNextSentence?' + new URLSearchParams({
+  fetch('http://localhost:5004/predictNextSentence?' + new URLSearchParams({
     text: text,
 }), {
     method: 'GET',

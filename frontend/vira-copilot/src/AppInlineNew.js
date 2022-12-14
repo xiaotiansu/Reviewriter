@@ -17,7 +17,7 @@ import CircularProgress, {
 
 // Hamta Configuration
 
-let serverURL = "http://localhost:5003/";
+let serverURL = "http://localhost:5004/";
 
 let timerLength = 1; // in seconds
 let minimumNumberOfWordsToTriggerGeneration = 25;
