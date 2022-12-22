@@ -9,6 +9,9 @@ import json
 from types import SimpleNamespace
 import threading
 
+import openai
+openai.api_key = "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"
+
 lock = threading.Lock()
 
 app = Flask(__name__, static_url_path='/static')
@@ -33,8 +36,13 @@ def remove_prefix(text, prefix):
 
 def predict_text(initial_text, num_of_words):
     global gpt2_pipe
-    result = str(gpt2_pipe(initial_text, max_length = num_of_words)[0]["generated_text"])
-    result = remove_prefix(result, initial_text)
+    response = openai.Completion.create(
+        model="text-davinci-003",
+        prompt=initial_text,
+        max_tokens=num_of_words,
+        temperature=1.0
+    )
+    result = response["choices"][0]["text"].replace('\n', ' ').strip()
     return result
 
 @app.route('/')
