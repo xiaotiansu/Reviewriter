@@ -267,9 +267,15 @@ const keyTappedInNoneStatus = (textEditorIndex, textEditor, hintArea, key, event
             const currentOffset = Cursor.getCurrentCursorPosition(textEditor);
             setLoading(currentOffset, textEditor);
             const initialText = allTextUpToCursorInTextEditor(textEditorIndex, textEditor, currentOffset);
-            fetch(serverURL + 'predict?' + new URLSearchParams({
-                text: initialText,
-            }), { method: 'GET', headers: { 'Content-Type': 'application/json' } })
+            fetch(serverURL + "predict", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json; charset=utf-8"
+                },
+                body: JSON.stringify({
+                    "text": initialText
+                })
+            })
                 .then(response => response.json())
                 .then(data => {
                     fetchedSuggestions = data.suggestions;
@@ -498,7 +504,7 @@ function AppInlineNew() {
 
 
                 <div id="main-container" className="main-container-prompt-and-text-editor">
-                    <div style={{ paddingLeft: '2%', paddingRight: '2%', paddingTop: '0%', paddingBottom: '0%', marginBottom: 20, border: '1px solid #111', width: '96%', borderRadius: 20}}>
+                    <div style={{ paddingLeft: '2%', paddingRight: '2%', paddingTop: '0%', paddingBottom: '0%', marginBottom: 20, border: '1px solid #111', width: '96%', borderRadius: 20 }}>
                         <p style={{ fontSize: '150%', lineHeight: '150%' }}>
                             {/* TODO: link for video! */}
                             In dieser Aufgabe werden Sie gebeten, einen Peer Review von mindestens 300 Wörtern über ein Geschäftsmodell zu schreiben. Dabei sollten Sie versuchen, die Stärken und Schwächen des Geschäftsmodells sowie eigene Verbesserungsvorschläge und Ideen einzubringen.
@@ -506,7 +512,7 @@ function AppInlineNew() {
                     </div>
 
                     <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', width: '100%', marginBottom: 20, fontSize: '150%', textAlign: "center", lineHeight: "150%" }} id="hint-area">
-                        &nbsp;<br/>&nbsp;
+                        &nbsp;<br />&nbsp;
                     </div>
 
                     <div contentEditable={true} className={"text-editor"} id="text-editor-1" onKeyUp={(event) => keyTapped(1, event, document.getElementById("text-editor-1"))} onKeyDown={keyDownOnTextArea} onPaste={onPaste}></div>
@@ -535,7 +541,7 @@ function AppInlineNew() {
                             <h2>Leitfaden für das Verfassen von Peer-Reviews</h2>
 
                             <p>
-                                Beginnen Sie mit der Eingabe Ihres Peer-Reviews im Textbereich unter. Drücken Sie die Eingabetaste, um einen neuen Absatz zu beginnen. 
+                                Beginnen Sie mit der Eingabe Ihres Peer-Reviews im Textbereich unter. Drücken Sie die Eingabetaste, um einen neuen Absatz zu beginnen.
                             </p>
 
                             <p>

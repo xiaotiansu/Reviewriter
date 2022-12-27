@@ -57,18 +57,18 @@ def find_result(text):
     response = " ".join(words[:-1])
     return response
 
-@app.route('/predict', methods=['GET'])
+@app.route('/predict', methods=['POST'])
 def predict():
-    text = request.args.get('text').strip()
+    text = request.json['text'].strip()
     result_1 = find_result(text)
     result_2 = find_result(text)
     result_3 = find_result(text)
     return jsonify({"suggestions": [result_1, result_2, result_3]})
 
-@app.route('/predict_static', methods=['GET'])
+@app.route('/predict_static', methods=['POST'])
 def predict_static():
     global static_text
-    length = len(request.args.get('text').strip())
+    length = len(request.json['text'].strip())
     result_1 = find_result(static_text[: length])
     result_2 = find_result(static_text[: length])
     result_3 = find_result(static_text[: length])
