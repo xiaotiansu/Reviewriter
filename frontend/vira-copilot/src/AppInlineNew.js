@@ -17,7 +17,7 @@ import CircularProgress, {
 
 // Hamta Configuration
 
-let serverURL = "http://localhost:5004/";
+let serverURL = "https://ml4ed-apps.epfl.ch/reviewriter5003/";
 
 let timerLength = 0.00000001; // in seconds
 let minimumNumberOfWordsToTriggerGeneration = 25;

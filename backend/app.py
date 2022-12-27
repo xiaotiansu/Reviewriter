@@ -94,4 +94,4 @@ def submit_review_text():
     return jsonify({"success": True})
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5004, debug=True)
+    app.run(host='0.0.0.0', port=5003, debug=True)

@@ -120,7 +120,7 @@ let isPredicting = false;
 
 const predictNextWord = (textEditor, text, hintArea) => {
     isPredicting = true;
-    fetch('http://localhost:5004/predictNextWord?' + new URLSearchParams({
+    fetch('https://ml4ed-apps.epfl.ch/reviewriter5003/predictNextWord?' + new URLSearchParams({
         text: text,
     }), {
         method: 'GET',
