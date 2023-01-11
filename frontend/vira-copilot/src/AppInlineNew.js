@@ -19,7 +19,7 @@ import CircularProgress, {
 
 let serverURL = "http://localhost:5004/";
 
-let timerLength = 1; // in seconds
+let timerLength = 0.00000001; // in seconds
 let minimumNumberOfWordsToTriggerGeneration = 25;
 
 let keystrokes = [];
@@ -283,7 +283,7 @@ const keyTappedInNoneStatus = (textEditorIndex, textEditor, hintArea, key, event
                 .catch((error) => {
                     removeSuggestion(textEditor);
                 });
-        }, timerLength * 1000 + 1);
+        }, timerLength);
     } else {
         const currentText = getTextOfEditor(textEditor);
         removeSuggestion(textEditor);
